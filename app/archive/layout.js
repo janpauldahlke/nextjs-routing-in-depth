@@ -1,10 +1,10 @@
 const ArchiveLayout = ({ archive, latest }) => {  // the props names will match the folder names that start with @
-// NOTE: the convention of next for parallel routes is to use @<routeName> in sibling folders
-// we need to wrap parallel routes in the layout like so
+  // NOTE: the convention of next for parallel routes is to use @<routeName> in sibling folders
+  // we need to wrap parallel routes in the layout like so
   // we could have more then 2 routes, up to n i guess
 
-  console.log(archive)
-  console.log(latest)
+  // console.log(archive)
+  // console.log(latest)
   
   return (
     <div>
