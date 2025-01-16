@@ -1,14 +1,31 @@
 import Link from "next/link";
+import Image from "next/image";
+
+import { DUMMY_NEWS } from "@/dumy-news";
 
 const NewsPage = () => {
   return (
     <>
       <h1>welcome to fakenews</h1>
       <p>we make desinformation great again.</p>
-      <ul>
-        <li><Link href="/news/link1">newslink 1</Link></li>
-        <li><Link href="/news/link2">newslink 2</Link></li>
-        <li><Link href="/news/link3">newslink 3</Link></li>
+      <ul className="news-list">
+        {(DUMMY_NEWS ?? []).map(({id,  slug, title, image}) => { 
+          return (
+            <li key={id}>
+              <Link href={`news/${slug}`} >
+                <Image
+                  src={`/images/news/${image}`}
+                  alt={title}
+                  width={0}
+                  height={0}
+                  sizes="100vw"
+                  style={{ width: "100%", height: "auto" }} 
+                />
+                <span>{ title }</span>
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </>
   ); 
