@@ -1,7 +1,13 @@
 # nextjs-routing-in-depth
 
-----
-> this took me hours
+
+## preview possible here
+
+[codesandbox](https://codesandbox.io/p/github/janpauldahlke/nextjs-routing-in-depth/main?import=true&workspaceId=ws_13ESXanWQPaPX2oCQ9ipWD)
+
+---
+
+>**this took me hours to understand**
 
 ## 🚨 LEARNING VERY IMPORTANT 🚨
 
@@ -17,7 +23,8 @@ If changes to parallel or intercepted routes **aren’t working**, **always** tr
 ```sh
 rm -rf .next
 npm run dev
----
+```
+
 
 ### making routes load in parallel
 
@@ -35,7 +42,7 @@ npm run dev
      ├── page.js # Renders inside { latest }
 ```
 
-#### optinal catch-all segements
+#### optional catch-all segements
 [docs](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments)
 
 Catch-all routes handle dynamic segments in a flexible way:
@@ -57,7 +64,7 @@ export default Page;
 This allows `/archive/2024/01`, `/archive/2024`, and `/archive`.
 
 
-#### interceptin routes 
+#### intercepting routes 
 
 [nextjs interceptiong routes docs](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes)
 
