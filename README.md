@@ -7,6 +7,10 @@
 
 ---
 
+
+### my learning
+* file and folder structure is tery importante for nextjs, one should really learn those
+
 >**this took me hours to understand**
 
 ## 🚨 LEARNING VERY IMPORTANT 🚨
@@ -24,7 +28,6 @@ If changes to parallel or intercepted routes **aren’t working**, **always** tr
 rm -rf .next
 npm run dev
 ```
-
 
 ### making routes load in parallel
 
@@ -81,3 +84,23 @@ This allows `/archive/2024/01`, `/archive/2024`, and `/archive`.
   * `(.)<sibling route name>` when the sibling folders name is identical
   * `(..)<sibling route name>` when the sibling folders name is identical and nested route
   * `(<silbing folder name>)` is also fine
+
+
+
+### route groups
+* are is a folder that is not resolved as path, should be top level in `/app`
+* nameing convention and folder structure convention is
+  ```|/app
+       |/(content)               --> will not create a route !!
+       |  |/pages folders        --> like normal routing
+       |  |--page.js             --> your routename       
+       |  |--layout.js           --> the routes layout
+       |  |-layout.js            --> the route groups layout, name it **RootLayout**
+       |  |-not-found.js         --> the not-found for this route group segment
+       |/(theOtherRouteGroup)    --> will not create a route !!
+       |     | .. follow content paradigm here
+       |-global.css
+       |....
+  ```
+
+
