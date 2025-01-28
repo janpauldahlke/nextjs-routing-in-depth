@@ -26,7 +26,7 @@ const InterceptedImagePage = ({ params }) => {
   return (
     <>
       <div className="modal-backdrop" onClick={ router.back } ></div>
-      <dialog className="modal" open>
+      <dialog className="modal" open onClick={ router.back }>
         <div className="fullscreen-image">
           <img src={`/images/news/${newsItem.image}`} alt={ newsItem.title } />
         </div>
