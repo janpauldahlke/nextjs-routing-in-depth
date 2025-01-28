@@ -37,3 +37,22 @@ const Page = ({ params }) => {
 export default Page;
 ```
 This allows `/archive/2024/01`, `/archive/2024`, and `/archive`.
+
+
+#### interceptin routes 
+
+[nextjs interceptiong routes docs](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes)
+
+```
+(.) to match segments on the same level
+(..) to match segments one level above
+(..)(..) to match segments two levels above
+(...) to match segments from the root app directory
+```
+
+> in our words and understanding
+* this enables us to differ from internal routes to external link calls, so ecternal calls get handlede differently like in our  example and will reroute away from the fullscreen image
+* see `/news/[newsSlug]()image` for naming convention 
+  * `(.)<sibling route name>` when the sibling folders name is identical
+  * `(..)<sibling route name>` when the sibling folders name is identical and nested route
+  * `(<silbing folder name>)` is also fine

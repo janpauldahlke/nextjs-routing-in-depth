@@ -11,7 +11,7 @@ const NavLink = ({ href, children}) => {
 
   return (
     <li>
-        <Link href={href} className={path.startsWith(`/${href}`) ? "active" : undefined}>
+        <Link href={`/${href}`} className={path.startsWith(`/${href}`) ? "active" : undefined}>
           { children }
         </Link>
     </li>
