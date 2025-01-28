@@ -1,6 +1,6 @@
 'use client';
 
-const FilterError = ({ error}) => { 
+const FilterError = ({ error }) => { 
   return (
     <h1>An Error occured : { error.message}</h1>
   );

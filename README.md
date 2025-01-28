@@ -1,5 +1,23 @@
 # nextjs-routing-in-depth
 
+----
+> this took me hours
+
+## 🚨 LEARNING VERY IMPORTANT 🚨
+
+### ⚠️ Next.js Parallel Routes & Caching Issue
+When using **parallel routes (@slot) and intercepted routes (.)**, Next.js **caches routing structures aggressively**, which can lead to:
+- **Routes not resolving properly**
+- **Intercepted routes (`(.)folder`) failing to load**
+- **`modal` slots appearing as `undefined`**
+- **Page updates not reflecting in development mode**
+
+#### 🛠 Fix: Clear Next.js Cache
+If changes to parallel or intercepted routes **aren’t working**, **always** try this:
+```sh
+rm -rf .next
+npm run dev
+---
 
 ### making routes load in parallel
 

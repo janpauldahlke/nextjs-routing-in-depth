@@ -7,7 +7,7 @@ const NavLink = ({ href, children}) => {
 
   const path = usePathname()
 
-  console.log(path, href)
+  //console.log(path, href)
 
   return (
     <li>
